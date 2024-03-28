@@ -1,5 +1,5 @@
 output domain {
-  value = aws_s3_bucket.mock.website_domain
+  value = aws_s3_bucket_website_configuration.mock.website_domain
 }
 
 output bucket_name {
