@@ -9,6 +9,14 @@ resource aws_s3_bucket mock {
   }
 }
 
+resource aws_s3_bucket_ownership_controls mock {
+  bucket = aws_s3_bucket.mock.id
+
+  rule {
+    object_ownership = "BucketOwnerEnforced"
+  }
+}
+
 data aws_iam_policy_document mock {
   statement {
     actions = ["s3:GetObject"]
