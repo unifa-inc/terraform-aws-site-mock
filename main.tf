@@ -13,7 +13,7 @@ resource aws_s3_bucket_ownership_controls mock {
   bucket = aws_s3_bucket.mock.id
 
   rule {
-    object_ownership = "BucketOwnerEnforced"
+    object_ownership = "ObjectWriter"
   }
 }
 
